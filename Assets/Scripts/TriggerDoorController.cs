@@ -8,11 +8,13 @@ public class TriggerDoorController : MonoBehaviour
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closeTrigger = false;
 
-    void Update(){
-    	if (Input.GetKey("f")){
+    void OnCollisionEnter2D(Collision2D collision){
+    	if(collision.gameObject.tag == "Interactable"){
+    		Debug.Log("Hit");
     		myDoor.Play("DoorOpen", 0, 0.0f);
     	}
     }
+
 }
 
 //     private void onTriggerEnter(Collider other){
