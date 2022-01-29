@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressPlateActivator : MonoBehaviour
+public class PlateTrigger : MonoBehaviour
 {
     private BoxCollider2D boxCollider; // Box collider of the player. Facilitates collision detection.
     [SerializeField] private LayerMask playerLayer; 
+    [SerializeField] public bool activated = false;
 
 
     private void Awake() {
@@ -15,9 +16,12 @@ public class PressPlateActivator : MonoBehaviour
     void Update()
     {
         if(onPlayer()){
-            
+            activated = true;
         Debug.Log("Works");
         }
+        // else{
+        //     active = false;
+        // }
     }
 
     private bool onPlayer(){

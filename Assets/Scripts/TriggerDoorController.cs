@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerDoorController : MonoBehaviour
 {
     [SerializeField] private Animator myDoor = null;
+    private Animator anim;
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closeTrigger = false;
 
