@@ -7,27 +7,46 @@ public class OpenDoor : MonoBehaviour
     private Animator anim;
     [SerializeField] GameObject pressPlate;
     private bool open = false;
+    private float timer = -0.5f;
     private void Awake() {
         anim = GetComponent<Animator>();
     }
-    public int timer = 10;
+
     void Update()
     {
-        bool active = pressPlate.GetComponent<PlateTrigger>().activated;
 
-        if(active&&!open){
-            anim.Play("PressurePlateDown");
-            while(timer > 0){
-    	     anim.Play("DoorOpen");
-             open = true;
-             timer -= timer;
-         }
-            if(timer == 0){
-                //anim.Play("DoorClose");
-            }
-        } else if(!active&&open){
-            open = false;
-            
+        bool active = pressPlate.GetComponent<PlateTrigger>().activated;
+        
+        
+        
+        
+        timer -= Time.deltaTime;
+
+        Debug.Log(open);
+
+        if(active){
+            timer = 3.0f;
+            open = true;
+        } else if(!active){
+           // timer = 3.0f;
         }
+        if(timer<=0.0f&&timer>=-1.0f){
+
+            timer = 1.0f;
+            open = false;
+        }
+
+        if(open){
+            anim.Play("PressurePlateDown");
+    	    anim.Play("DoorOpen");
+        }else{
+            anim.Play("DoorClose");
+        }
+
+
+
+
+
+
     }
 }

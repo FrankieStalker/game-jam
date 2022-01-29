@@ -17,11 +17,11 @@ public class PlateTrigger : MonoBehaviour
     {
         if(onPlayer()){
             activated = true;
-        Debug.Log("Works");
+        //Debug.Log("Works");
         }
-        // else{
-        //     active = false;
-        // }
+        else{
+            activated = false;
+        }
     }
 
     private bool onPlayer(){
