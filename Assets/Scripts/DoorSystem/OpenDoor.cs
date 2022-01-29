@@ -9,6 +9,8 @@ public class OpenDoor : MonoBehaviour
     private bool open = false;
     private bool firstTimeHuh = true;
     private float timer = -0.5f;
+    public string animationOpenName = "";
+    public string animationCloseName = "";
 
     private void Awake() {
         anim = GetComponent<Animator>();
@@ -40,10 +42,10 @@ public class OpenDoor : MonoBehaviour
 
         if(open){
             anim.Play("PressurePlateDown");
-    	    anim.Play("DoorOpen");
+    	    anim.Play(animationOpenName);
             firstTimeHuh = false;
         }else if (!firstTimeHuh){
-            anim.Play("DoorClose");
+            anim.Play(animationCloseName);
         }
 
 
