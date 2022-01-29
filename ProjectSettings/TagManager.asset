@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Interactable
   - Player2
+  - PressurePlate
   layers:
   - Default
   - TransparentFX

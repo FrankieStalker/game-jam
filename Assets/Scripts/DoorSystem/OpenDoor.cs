@@ -10,12 +10,21 @@ public class OpenDoor : MonoBehaviour
     private void Awake() {
         anim = GetComponent<Animator>();
     }
+    public int timer = 10;
     void Update()
     {
         bool active = pressPlate.GetComponent<PlateTrigger>().activated;
+
         if(active&&!open){
-    	     anim.Play("DoorOpen", 0, 0.0f);
+            anim.Play("PressurePlateDown");
+            while(timer > 0){
+    	     anim.Play("DoorOpen");
              open = true;
+             timer -= timer;
+         }
+            if(timer == 0){
+                //anim.Play("DoorClose");
+            }
         } else if(!active&&open){
             open = false;
             
