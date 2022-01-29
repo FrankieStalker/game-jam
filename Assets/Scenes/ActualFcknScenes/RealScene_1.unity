@@ -393,7 +393,7 @@ Transform:
   m_LocalScale: {x: 0.13664895, y: 1.3459, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -38.808}
 --- !u!50 &53163949
 Rigidbody2D:
@@ -827,7 +827,7 @@ Transform:
   m_LocalScale: {x: 1.3161, y: 0.2141195, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &221630027
 Rigidbody2D:
@@ -909,7 +909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.9, y: 55.604}
+  m_AnchoredPosition: {x: -0.488, y: 52.8}
   m_SizeDelta: {x: 0.976, y: 2.362}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &230819068
@@ -1443,7 +1443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.14, y: -52.5}
+  m_AnchoredPosition: {x: 4, y: -54.5}
   m_SizeDelta: {x: 0.976, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &578000048
@@ -1574,7 +1574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643641106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.19999999, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 2129988042}
@@ -1967,7 +1967,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.8509789
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1999,7 +1999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914239580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.002, y: 0.011000061, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 45826118}
@@ -2187,7 +2187,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1066946871
 Rigidbody2D:
@@ -2545,10 +2545,10 @@ GameObject:
   - component: {fileID: 1193149723}
   - component: {fileID: 1193149722}
   - component: {fileID: 1193149725}
-  - component: {fileID: 1193149726}
   - component: {fileID: 1193149724}
   - component: {fileID: 1193149727}
   - component: {fileID: 1193149728}
+  - component: {fileID: 1193149726}
   m_Layer: 0
   m_Name: EndGoal
   m_TagString: Untagged
@@ -2614,12 +2614,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193149721}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.99, y: -8.2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 56.99, y: -8.200001, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1193149724
 Rigidbody2D:
@@ -2680,8 +2680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94132b9515c01d84fb0fc518c0062f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondEndGoal: {fileID: 0}
-  newLevel: SampleScene
+  secondEndGoal: {fileID: 1260170073}
+  newLevel: RealScene_1
 --- !u!61 &1193149727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2905,10 +2905,10 @@ GameObject:
   - component: {fileID: 1260170079}
   - component: {fileID: 1260170078}
   - component: {fileID: 1260170077}
-  - component: {fileID: 1260170076}
   - component: {fileID: 1260170075}
   - component: {fileID: 1260170074}
   - component: {fileID: 1260170080}
+  - component: {fileID: 1260170076}
   m_Layer: 0
   m_Name: EndGoal (1)
   m_TagString: Untagged
@@ -2972,11 +2972,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260170073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94132b9515c01d84fb0fc518c0062f59, type: 3}
+  m_Script: {fileID: 11500000, guid: 48191873f61673a41882486e81616cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondEndGoal: {fileID: 0}
-  newLevel: SampleScene
+  thisBallActivated: 0
+  secondBallActivated: 0
+  newLevel: 
 --- !u!61 &1260170077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3171,7 +3172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 9.918124, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1322561080
 Rigidbody2D:
@@ -3907,8 +3908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0020000457, y: 0.219}
-  m_SizeDelta: {x: 400, y: 147.443}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 400, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832543776
 MonoBehaviour:
