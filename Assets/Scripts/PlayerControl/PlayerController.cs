@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour
       
         // Facilitates *flipping* of the sprite
         if(horizInput>0.01f)
-            transform.localScale = new Vector3(5,5,5);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         else if(horizInput<-0.01f)
-            transform.localScale = new Vector3(-5,5,5);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
         
         
 
