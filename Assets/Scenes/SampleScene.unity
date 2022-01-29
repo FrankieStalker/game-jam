@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 168916305}
   - component: {fileID: 168916304}
   - component: {fileID: 168916303}
+  - component: {fileID: 168916309}
   m_Layer: 0
   m_Name: EndGoal
   m_TagString: Untagged
@@ -524,12 +525,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168916302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.73, y: -3.6687999, z: 0}
+  m_LocalPosition: {x: 0.48, y: -9.8, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &168916309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168916302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94132b9515c01d84fb0fc518c0062f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newLevel: 
 --- !u!1 &233666902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,6 +4278,7 @@ GameObject:
   - component: {fileID: 2092765614}
   - component: {fileID: 2092765613}
   - component: {fileID: 2092765612}
+  - component: {fileID: 2092765618}
   m_Layer: 0
   m_Name: EndGoal (1)
   m_TagString: Untagged
@@ -4416,9 +4431,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092765611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.51, y: 11.92, z: 0}
+  m_LocalPosition: {x: 2.61, y: 12.51, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2092765618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092765611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94132b9515c01d84fb0fc518c0062f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newLevel: 
