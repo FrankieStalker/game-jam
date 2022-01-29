@@ -7,7 +7,9 @@ public class OpenDoor : MonoBehaviour
     private Animator anim;
     [SerializeField] GameObject pressPlate;
     private bool open = false;
+    private bool firstTimeHuh = true;
     private float timer = -0.5f;
+
     private void Awake() {
         anim = GetComponent<Animator>();
     }
@@ -39,7 +41,8 @@ public class OpenDoor : MonoBehaviour
         if(open){
             anim.Play("PressurePlateDown");
     	    anim.Play("DoorOpen");
-        }else{
+            firstTimeHuh = false;
+        }else if (!firstTimeHuh){
             anim.Play("DoorClose");
         }
 
