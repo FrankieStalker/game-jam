@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim; // animator facilitates animations. mainly used to traverse states in state machine
     private BoxCollider2D boxCollider; // Box collider of the player. Facilitates collision detection.
     private float wallJumpCooldown;
+    public Vector3 scale;
     float horizInput;
     // On creation
     private void Awake() {
@@ -26,9 +27,9 @@ public class PlayerController : MonoBehaviour
       
         // Facilitates *flipping* of the sprite
         if(horizInput>0.01f)
-            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            transform.localScale = new Vector3(scale.x, scale.y, scale.z);
         else if(horizInput<-0.01f)
-            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
+            transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
         
         
 
@@ -36,23 +37,13 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("walk", horizInput !=0); // walk if x axis input is not equals to zero
         anim.SetBool("grounded", isGrounded()); // grounded...
 
-        if(wallJumpCooldown > 0.2f){
-            
-                
-            body.velocity = new Vector2(horizInput * speed,body.velocity.y); // facilitate movement right and left (D and A)
-            if(onWall() && !isGrounded()){
-                body.gravityScale = 0;
-                body.velocity = Vector2.zero;
-            }else{
-                body.gravityScale = 2;
-            }
-
-            //Jump if is grounded and space is pressend
-            if(Input.GetKey(KeyCode.Space) )
-                Jump();
-        }
-        else
-            wallJumpCooldown += Time.deltaTime;
+        Debug.Log(isGrounded());
+        body.velocity = new Vector2(horizInput * speed,body.velocity.y); // facilitate movement right and left (D and A)
+        
+        //Jump if is grounded and space is pressend
+        if(Input.GetKey(KeyCode.Space) )
+            Jump();
+        wallJumpCooldown += Time.deltaTime;
 
     }
     
@@ -62,18 +53,6 @@ private void Jump(){
         anim.SetTrigger("jump"); // trigger jumping state
         // grounded = false;
     }
-    else if(onWall() && !isGrounded()){
-
-
-        if(horizInput == 0){
-            body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }
-        else
-        body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3,5);
-
-        wallJumpCooldown = 0;
-    }
 }
 
 
@@ -82,15 +61,6 @@ private void Jump(){
 private bool isGrounded(){
     // returns whether the box collider that points down hits an object with the tag stored in serialized GroundLayer var
     RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-    // return whether the boxCollider actually hits the groundLayer. So returns true, if it is not equal to zero.
-    return raycastHit.collider != null;
-    
-}
-
-// Jumping from walls
-private bool onWall(){
-    // returns whether the box collider that points down hits an object with the tag stored in serialized GroundLayer var
-    RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, WallLayer);
     // return whether the boxCollider actually hits the groundLayer. So returns true, if it is not equal to zero.
     return raycastHit.collider != null;
     
