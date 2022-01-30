@@ -18,8 +18,13 @@ public class OpenDoor : MonoBehaviour
 
     void Update()
     {
-
-        bool active = pressPlate.GetComponent<componentType>().activated;
+        bool active;
+        if(componentType == "plate"){
+            active = pressPlate.GetComponent<PlateTrigger>().activated;
+        }
+        else{
+            active = pressPlate.GetComponent<ButtonTrigger>().activated;
+        }
         
         
         

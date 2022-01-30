@@ -7,7 +7,7 @@ public class ButtonTrigger : MonoBehaviour
     // Start is called before the first frame update
     private Animator anim;
     private bool canBeActivated;
-    private bool activated = false;
+    public bool activated = false;
     public GameObject stand;
 
     bool firstTimeHuhQuestionMarkHaHaMeeeeemeees = true;
