@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ActualFcknScenes/GameOver.unity
     guid: 912869a233938d446809081147ef5c87
+  - enabled: 1
+    path: Assets/Scenes/ActualFcknScenes/NewCharTest.unity
+    guid: bda7728470525614ab37aa503da487c3
   m_configObjects: {}
