@@ -6,7 +6,7 @@ public class ButtonTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool canBeActivated;
-    private bool active = false;
+    private bool activated = false;
     public GameObject stand;
 
     bool firstTimeHuhQuestionMarkHaHaMeeeeemeees = true;
@@ -28,11 +28,11 @@ public class ButtonTrigger : MonoBehaviour
         highlight();
         if(canBeActivated){
             if (Input.GetKeyUp(KeyCode.E)){
-                active = !active;
+                activated = !activated;
             }
         }
 
-        if(active){
+        if(activated){
             firstTimeHuhQuestionMarkHaHaMeeeeemeees = false;
             Debug.Log("animation is playing");
             /*
