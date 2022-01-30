@@ -325,7 +325,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &50291885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -420,6 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78926619}
   - component: {fileID: 78926618}
+  - component: {fileID: 78926616}
   m_Layer: 0
   m_Name: ButtonTip
   m_TagString: Untagged
@@ -427,6 +428,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &78926616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78926615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c0ee2b616eff24eacf819ac496948f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stand: {fileID: 837510274}
 --- !u!212 &78926618
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1249,6 +1263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528987306}
   - component: {fileID: 528987305}
+  - component: {fileID: 528987303}
   m_Layer: 0
   m_Name: ButtonBody2
   m_TagString: Untagged
@@ -1256,6 +1271,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &528987303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528987302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b415ec1e6d88fc341889e29ed1b7a855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  player: {fileID: 1453356157}
 --- !u!212 &528987305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1524,7 +1553,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &630080294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1793,6 +1822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752708350}
   - component: {fileID: 752708349}
+  - component: {fileID: 752708347}
   m_Layer: 0
   m_Name: ButtonTip
   m_TagString: Untagged
@@ -1800,6 +1830,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &752708347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752708346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c0ee2b616eff24eacf819ac496948f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stand: {fileID: 528987302}
 --- !u!212 &752708349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2106,7 +2149,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &831613373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2201,6 +2244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837510278}
   - component: {fileID: 837510277}
+  - component: {fileID: 837510275}
   m_Layer: 0
   m_Name: ButtonBody3
   m_TagString: Untagged
@@ -2208,6 +2252,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &837510275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837510274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b415ec1e6d88fc341889e29ed1b7a855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  player: {fileID: 1453356157}
 --- !u!212 &837510277
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2507,7 +2565,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &1170731231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2603,6 +2661,7 @@ GameObject:
   - component: {fileID: 1249855375}
   - component: {fileID: 1249855374}
   - component: {fileID: 1249855373}
+  - component: {fileID: 1249855372}
   m_Layer: 0
   m_Name: ButtonTip
   m_TagString: Untagged
@@ -2610,6 +2669,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1249855372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249855371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c0ee2b616eff24eacf819ac496948f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stand: {fileID: 1867894957}
 --- !u!61 &1249855373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2713,6 +2785,7 @@ GameObject:
   - component: {fileID: 1314444857}
   - component: {fileID: 1314444856}
   - component: {fileID: 1314444855}
+  - component: {fileID: 1314444858}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -2801,6 +2874,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1314444858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314444853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c0ee2b616eff24eacf819ac496948f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stand: {fileID: 0}
 --- !u!1 &1314552186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,7 +3254,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &1430563591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3420,7 +3506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453356157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.29, y: -3.15, z: 0}
+  m_LocalPosition: {x: 28.7, y: -9.9, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 1697126805}
@@ -3888,6 +3974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867894961}
   - component: {fileID: 1867894960}
+  - component: {fileID: 1867894958}
   m_Layer: 0
   m_Name: ButtonBody1
   m_TagString: Untagged
@@ -3895,6 +3982,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1867894958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867894957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b415ec1e6d88fc341889e29ed1b7a855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  player: {fileID: 1453356157}
 --- !u!212 &1867894960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4027,7 +4128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &1876326167
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4417,7 +4518,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &2018590800
 SpriteRenderer:
   m_ObjectHideFlags: 0

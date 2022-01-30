@@ -26,7 +26,7 @@ public class OpenDoor : MonoBehaviour
         
         timer -= Time.deltaTime;
 
-        Debug.Log(open);
+       // Debug.Log(open);
 
         if(active){
             timer = 3.0f;

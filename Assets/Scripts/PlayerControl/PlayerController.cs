@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     // Every frame
     private void Update() {
-
+        //transform.localPosition;
         horizInput = Input.GetAxis("Horizontal"); // get horizontal axis input 
 
       

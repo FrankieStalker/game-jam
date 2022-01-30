@@ -11,7 +11,7 @@ public class TriggerDoorController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
     	if(collision.gameObject.tag == "Interactable"){
-    		Debug.Log("Hit");
+    		//Debug.Log("Hit");
     		myDoor.Play("DoorOpen", 0, 0.0f);
     	}
     }
