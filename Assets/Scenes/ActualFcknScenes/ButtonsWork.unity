@@ -254,7 +254,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &30645661
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -403,6 +403,36 @@ Transform:
   m_Father: {fileID: 1523740059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &77556826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77556827}
+  m_Layer: 0
+  m_Name: SpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &77556827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77556826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.98, y: -6.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217555573
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +446,7 @@ GameObject:
   - component: {fileID: 217555576}
   - component: {fileID: 217555575}
   - component: {fileID: 217555574}
+  - component: {fileID: 217555579}
   m_Layer: 3
   m_Name: Door (4)
   m_TagString: Untagged
@@ -554,6 +585,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &217555579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217555573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7244dd7f04777469f32471cd0b003c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressPlate: {fileID: 2087477382}
+  animationOpenName: DoorOpen8
+  animationCloseName: DoorClose8
 --- !u!1 &308525350
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stand: {fileID: 0}
+  buttonAnimationOpenName: 
+  buttonAnimationCloseName: 
 --- !u!114 &348237656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,6 +1478,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &586007395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 586007397}
+  - component: {fileID: 586007396}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &586007396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586007395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795e9c67e87075d4ba8655f44dd96598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 77556827}
+  playerTransform: {fileID: 1523740059}
+--- !u!4 &586007397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586007395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792791862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1936,7 @@ GameObject:
   - component: {fileID: 1131054660}
   - component: {fileID: 1131054659}
   - component: {fileID: 1131054658}
+  - component: {fileID: 1131054663}
   m_Layer: 3
   m_Name: Door (2)
   m_TagString: Untagged
@@ -1981,6 +2075,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1131054663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131054657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7244dd7f04777469f32471cd0b003c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressPlate: {fileID: 2087477382}
+  animationOpenName: DoorOpen6
+  animationCloseName: DoorClose6
 --- !u!1 &1172048534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,7 +3097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523740052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.7, y: -9.9, z: 0}
+  m_LocalPosition: {x: -6.36, y: -9.9, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 58885512}
@@ -3498,6 +3607,7 @@ GameObject:
   - component: {fileID: 1884654572}
   - component: {fileID: 1884654574}
   - component: {fileID: 1884654573}
+  - component: {fileID: 1884654575}
   m_Layer: 0
   m_Name: ButtonTip
   m_TagString: Untagged
@@ -3532,6 +3642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stand: {fileID: 864037136}
+  buttonAnimationOpenName: ButtonDown3
+  buttonAnimationCloseName: ButtonUp3
 --- !u!212 &1884654574
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3583,6 +3695,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1884654575
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884654571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb1dd647bd121304696ea0a8a69f57ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1885822669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,7 +4045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900029974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67, y: 15.3, z: 0}
+  m_LocalPosition: {x: -5.52, y: 10.38, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 1291947977}
@@ -4108,6 +4239,7 @@ GameObject:
   - component: {fileID: 2000982998}
   - component: {fileID: 2000983000}
   - component: {fileID: 2000982999}
+  - component: {fileID: 2000983001}
   m_Layer: 0
   m_Name: ButtonTip
   m_TagString: Untagged
@@ -4142,6 +4274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stand: {fileID: 1385210101}
+  buttonAnimationOpenName: ButtonDown2
+  buttonAnimationCloseName: ButtonUp2
 --- !u!212 &2000983000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4193,6 +4327,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2000983001
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000982997}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d4dcd7fe13012104fa7696bec42eeead, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2071733998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,6 +4494,7 @@ GameObject:
   - component: {fileID: 2087477386}
   - component: {fileID: 2087477385}
   - component: {fileID: 2087477384}
+  - component: {fileID: 2087477387}
   m_Layer: 0
   m_Name: ButtonTip
   m_TagString: Untagged
@@ -4375,6 +4529,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stand: {fileID: 380784634}
+  buttonAnimationOpenName: ButtonDown1
+  buttonAnimationCloseName: ButtonUp1
 --- !u!61 &2087477385
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4452,6 +4608,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2087477387
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087477382}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b37cf05d99274a240bdbf0fbecb77ebd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2110479723
 GameObject:
   m_ObjectHideFlags: 0

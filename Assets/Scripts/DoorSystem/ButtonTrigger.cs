@@ -5,21 +5,24 @@ using UnityEngine;
 public class ButtonTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    private Animator anim;
     private bool canBeActivated;
     private bool activated = false;
     public GameObject stand;
 
     bool firstTimeHuhQuestionMarkHaHaMeeeeemeees = true;
     private Color IColor;
+    public string buttonAnimationOpenName = "";
+    public string buttonAnimationCloseName = "";
 
 
 
     Renderer rend;
     // Update is called once per frame
     private void Awake() {
-        
         rend = GetComponent<Renderer>();
         IColor = rend.material.color;
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -35,15 +38,11 @@ public class ButtonTrigger : MonoBehaviour
         if(activated){
             firstTimeHuhQuestionMarkHaHaMeeeeemeees = false;
             Debug.Log("animation is playing");
-            /*
-                PLAY ANIMATION HERE of PRESSING BUTTON DOWN HERE
-            */
+            anim.Play(buttonAnimationOpenName);
         }
         else if(!firstTimeHuhQuestionMarkHaHaMeeeeemeees){
             Debug.Log("reversed animation is playing");
-            /*
-                PLAY ANIMATION HERE of DE_PRESSING BUTTON DOWN HERE
-            */
+            anim.Play(buttonAnimationCloseName);
         }
         
     }

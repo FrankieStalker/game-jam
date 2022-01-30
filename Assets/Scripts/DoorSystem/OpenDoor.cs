@@ -11,7 +11,7 @@ public class OpenDoor : MonoBehaviour
     private float timer = -0.5f;
     public string animationOpenName = "";
     public string animationCloseName = "";
-
+    public string componentType = "";
     private void Awake() {
         anim = GetComponent<Animator>();
     }
@@ -19,7 +19,7 @@ public class OpenDoor : MonoBehaviour
     void Update()
     {
 
-        bool active = pressPlate.GetComponent<PlateTrigger>().activated;
+        bool active = pressPlate.GetComponent<componentType>().activated;
         
         
         
@@ -41,17 +41,11 @@ public class OpenDoor : MonoBehaviour
         }
 
         if(open){
-            anim.Play("PressurePlateDown");
+            //anim.Play("PressurePlateDown");
     	    anim.Play(animationOpenName);
             firstTimeHuh = false;
         }else if (!firstTimeHuh){
             anim.Play(animationCloseName);
         }
-
-
-
-
-
-
     }
 }

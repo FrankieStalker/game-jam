@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ActualFcknScenes/RealScene_1.unity
     guid: 7b65f9f2288b56d4aa1208ebc7a299f6
+  - enabled: 1
+    path: Assets/Scenes/ActualFcknScenes/GameOver.unity
+    guid: 912869a233938d446809081147ef5c87
   m_configObjects: {}
